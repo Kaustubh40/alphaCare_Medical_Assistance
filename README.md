@@ -91,99 +91,35 @@ ask("Explain why hydration is important during fever recovery.")
 
 ---
 
-**How to Run the Project (simple demo flow)**
+## 🚀 How to Run the Project (Simple Demo Flow)
 
-1. Open Google Colab→ https://colab.research.google.com
+1. **Open Google Colab**  
+   👉 [Google Colab](https://colab.research.google.com)
 
-2. Upload your notebooks:
+2. **Upload the notebooks:**  
+   - `colab_finetune.ipynb` → (training process, optional if you want to show fine-tuning)  
+   - `inference_demo.ipynb` → (main demo notebook for testing outputs)  
 
-colab_finetune.ipynb (training, if they want to see the process)
+3. **Change runtime settings:**  
+   - Go to **Runtime → Change runtime type**  
+   - Select:  
+     - **Python:** 3.10  
+     - **Hardware Accelerator:** GPU (T4 / A100 or available)  
+   - Save.  
 
-inference_demo.ipynb (testing, the main one you'll show for outputs)
+4. **Run notebook cells one by one:**  
+   - The first cell installs dependencies (`transformers`, `peft`, `trl`, etc.).  
+   - The base model (`microsoft/phi-2`) and tokenizer load from Hugging Face.  
+   - Your fine-tuned **LoRA adapter folder** (`alpacare_lora_adapter`) is loaded.  
 
-3. Change runtime:
+5. **Test outputs (in `inference_demo.ipynb`):**  
+   - Run the `ask()` function with your prompt.  
+   - Example:  
+     ```python
+     ask("Explain why hydration is important during fever recovery.")
+     ```  
+   - ✅ The model generates a safe medical-style response with an **educational disclaimer**.  
 
-Go to Runtime Change runtime type
-
-Select:
-
-Python 3.10
-
-GPU (T4/A100, anything available)
-
-Save.
-
-4. Run the notebook cells one by one:
-
-First cell installs dependencies (transformers, peft, trl, etc.)
-
-The model and tokenizer load from Hugging Face (microsoft/phi-2).
-
-Your fine-tuned LoRA adapter folder (alpacare_lora_adapter) is loaded.
-
-5. Test outputs (in inference_demo.ipynb):
-How to Run the Project (simple demo flow)
-
-1. Open Google Colab→ https://colab.research.google.com
-
-2. Upload your notebooks:
-
-colab_finetune.ipynb (training, if they want to see the process)
-
-inference_demo.ipynb (testing, the main one you'll show for outputs)
-
-3. Change runtime:
-
-Go to Runtime Change runtime type
-
-Select:
-
-Python 3.10
-
-GPU (T4/A100, anything available)
-
-Save.
-
-4. Run the notebook cells one by one:
-
-First cell installs dependencies (transformers, peft, trl, etc.)
-
-The model and tokenizer load from Hugging Face (microsoft/phi-2).
-
-Your fine-tuned LoRA adapter folder (alpacare_lora_adapter) is loaded.
-
-5. Test outputs (in inference_demo.ipynb):
-   How to Run the Project (simple demo flow)
-
-1. Open Google Colab→ https://colab.research.google.com
-
-2. Upload your notebooks:
-
-colab_finetune.ipynb (training, if they want to see the process)
-
-inference_demo.ipynb (testing, the main one you'll show for outputs)
-
-3. Change runtime:
-
-Go to Runtime Change runtime type
-
-Select:
-
-Python 3.10
-
-GPU (T4/A100, anything available)
-
-Save.
-
-4. Run the notebook cells one by one:
-
-First cell installs dependencies (transformers, peft, trl, etc.)
-
-The model and tokenizer load from Hugging Face (microsoft/phi-2).
-
-Your fine-tuned LoRA adapter folder (alpacare_lora_adapter) is loaded.
-
-5. Test outputs (in inference_demo.ipynb):
 
 ## ⚠️ Disclaimer
 
